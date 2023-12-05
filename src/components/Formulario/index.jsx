@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Formulario = () => {
+const Formulario = (props) => {
     const [materiaA, setMateriaA] = useState(0);
     const [materiaB, setMateriaB] = useState(0);
     const [materiaC, setMateriaC] = useState(0);
@@ -24,10 +24,10 @@ const Formulario = () => {
     }, [materiaA, materiaB, materiaC])
 
     const alteraNome = (evento) => {
-        setNome(evento.target.value);
+        // setNome(evento.target.value);
         setNome(estadoAnterior => {
-
-            return evento.target.value
+            // estadoAnterior = valornovo
+            return evento.target.value;
         })
     }
     
@@ -52,8 +52,8 @@ const Formulario = () => {
     return (
         <form>
             <ul>
-            {[1,2,3,4,5]. map(item => (
-                <li key={item}>{item}</li>
+                {[1,2,3,4,5]. map(item => (
+                    <li key={item}>{item}</li>
             ))}    
             </ul>
             
